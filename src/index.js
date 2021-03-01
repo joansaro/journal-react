@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { JounalApp } from './JounalApp';
 
-import './styles/styles.scss'
+import './styles/styles.scss';
 
 ReactDOM.render(
     <JounalApp />,

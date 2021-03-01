@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
-import { login, starGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
+import {starGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
 export const LoginScreen = () => {
@@ -10,7 +10,7 @@ export const LoginScreen = () => {
     const {loading} = useSelector(state => state.ui)
 
     const [ formValues, handleInputChange ]= useForm({
-        email: 'nando@gmail.com',
+        email: 'andy@gamil.com',
         password: '123456'
     });
 
