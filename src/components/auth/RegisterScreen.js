@@ -11,8 +11,8 @@ export const RegisterScreen = () => {
     const dispatch = useDispatch();
     const {msgError} = useSelector(state => state.ui);
 
-    console.log(msgError);
-
+/*     console.log(msgError);
+ */
     const [formValues, handleInputChange] = useForm({
         name: 'Andresito',
         email: 'andy@gamil.com',
@@ -50,7 +50,10 @@ export const RegisterScreen = () => {
         <>
             <h3 className="auth__title">Register</h3>
 
-            <form onSubmit={handleRegister}>
+            <form 
+                onSubmit={handleRegister}
+                className="animate__animated animate__fadeIn animate__faster"
+                >
 
                 {
                     msgError &&
