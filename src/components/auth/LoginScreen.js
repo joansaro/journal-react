@@ -10,7 +10,7 @@ export const LoginScreen = () => {
     const {loading} = useSelector(state => state.ui)
 
     const [ formValues, handleInputChange ]= useForm({
-        email: 'andy@gamil.com',
+        email: 'admin@admin.com',
         password: '123456'
     });
 
@@ -28,9 +28,9 @@ export const LoginScreen = () => {
         <>
             <h3 className="auth__title">Login</h3>
 
-            <form 
+            <form
                 onSubmit={handleLogin}
-                className="animate__animated animate__fadeIn animate__faster"
+                className="auth__form animate__animated animate__fadeIn animate__faster"
                 >
 
                 <input
@@ -54,7 +54,7 @@ export const LoginScreen = () => {
 
                 <button
                     type="submit"
-                    className="btn btn-primary btn-block"
+                    className="auth__button btn btn-primary "
                     disabled= { loading }
                 >
                     Login
@@ -64,17 +64,32 @@ export const LoginScreen = () => {
                 <div className="auth__social-networks">
                     <p>Login with social networks</p>
 
+                <div className="auth__social-buttons">
                     <div
-                        className="google-btn"
+                        className="auth__social-btn"
                         onClick={ handleGoogleLogin }
                     >
-                        <div className="google-icon-wrapper">
-                            <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+                        <div className="auth__social-button-icon-wrapper">
+                            <img className="auth__social-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
                         </div>
                         <p className="btn-text">
                             <b>Sign in with google</b>
                         </p>
                     </div>
+
+                    <div
+                        className="auth__social-btn"
+                        onClick={ handleGoogleLogin }
+                    >
+                        <div className="auth__social-button-icon-wrapper">
+                            <img className="auth__social-icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/GitHub_Mark.png" alt="google button" />
+                        </div>
+                        <p className="btn-text">
+                            <b>Sign in with github</b>
+                        </p>
+                    </div>
+
+                </div>
                 </div>
 
                 <Link 
