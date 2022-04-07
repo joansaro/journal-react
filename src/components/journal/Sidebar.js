@@ -21,6 +21,7 @@ export const Sidebar = () => {
         <aside className="journal__sidebar">
             <div className="journal__sidebar-navbar">
                 <h3 className="mt-5">
+                <i class="far fa-face-monocle"></i>
                     <i className="far fa-moon"></i>
                     <span> {name}</span>
                 </h3>
@@ -32,11 +33,20 @@ export const Sidebar = () => {
             </div>
 
             <div className="journal__new-entry"
-                onClick={ handleAddNew }
+
                 >
-                <i className="far fa-calendar-plus fa-5x"></i>
-                <p className="mt-5">New entry</p>
+                <input 
+                    type="text" 
+                    className='journal__search'
+                    placeholder="Search"
+                />
+                <i
+                    className=" far fa-calendar-plus fa-2x"
+                    onClick={ handleAddNew }></i>
+                {/* <p className="mt-5">New entry</p> */}
             </div>
+            <br />
+            <hr />
             <JournalEntries />
         </aside>
     )
